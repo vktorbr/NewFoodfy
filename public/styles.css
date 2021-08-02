@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+header{
+    width: min(90vw, 940px); /* header vai ter no max 940px de largura */
+    margin: 30px auto 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.admin{
+    background-color: black;
+    width: 100%;
+    margin: 0;
+}
+
+header .logo{
+    margin-right: 7.5rem;
+}
+
+header .logo.admin{
+    width: min(90vw, 940px); /* header vai ter no max 940px de largura */
+    margin: 0 auto 0;
+    display: flex;
+    align-items: center;
+    padding: 16px 0 ;
+}
+
+header .menu a{
+    margin-right: 1.88rem;
+    font-size: 1rem;
+    color: #111111;
+    text-decoration: none;
+}
+
+.headerAdmin{
+    width: min(90vw, 940px); /* header vai ter no max 940px de largura */
+    margin: 0 auto 0;
+    display: grid;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: -35px;
+    grid-template-columns: 1fr 140px;
+}
+
+.headerAdmin.create{
+    margin-bottom: 0;
+}
+
+.headerAdmin.edit{
+    width: 200px;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 500px;
+}
+
+.headerAdmin a, .headerAdmin button, #form-delete button, .formAdmin > button{
+    text-align: center;
+    background-color: #7159c1;
+    padding: 8px 16px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline;
+    cursor: pointer;
+}
+
+main{
+    width: min(90vw, 940px);
+    margin: 50px auto 0;
+}
+
+article{
+    margin-bottom: 30px;
+}
+
+article h1, article h2{
+    margin-bottom: 20px;
+}
+
+footer{
+    margin-top: 50px;
+    padding: 1.44rem;
+    font-size: 0.875rem;
+    color: #999999;
+    text-align: center;
+    background-color: #EEEEEE;
+}
+
+.start{
+    width: min(90vw, 940px);
+    margin: 30px auto 0;
+}
+
+.rectangle{
+    height: 366px;
+    background-color: #FBDFDB;
+    border-radius: 30px;
+    display: flex;
+    position: relative;
+}
+
+.welcome{
+    width: 100%;
+    height: 100%;
+    margin: 117px 0 0 60px;
+}
+
+.welcome .title{
+    margin-bottom: 10px;
+    color: #111111;
+}
+
+.welcome .subtitle{
+    width: min(30vw, 316px);
+    font-size: 1.13rem;
+    color: #000000;
+    opacity: 0.7;
+}
+
+.chef{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 6.25rem;
+}
+
+.mostAccessed{
+    width: min(90vw, 940px);
+    margin: 50px auto 0;
+}
+
+.recipes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.recipe{
+    width: min(20vw, 300px);
+    cursor: pointer;
+    
+}
+
+.recipeImage img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.recipeInfo{
+    margin-top: 20px;
+}
+
+.recipeInfo h3{
+    font-size: 1.13rem;
+    line-height: 1.31rem;
+    color: #111111;
+}
+
+.recipeInfo p{
+    margin-top: 5px;
+    color: #777777;
+    font-size: 0.875rem;
+}
+
+/* MODAL */
+.modalOverlay{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal{
+    width: 47.1vw;
+    height: 36.8vw;
+    background: #ffffff;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.modal img{
+    border-radius: 15px;
+    width: 42.9vw;
+    
+    margin: 30px auto 20px;
+}
+
+.modal h3{
+    font-size: 1.50rem;
+}
+
+.modal p{
+    color: #777777;
+    font-size: 1.13rem;
+    margin-top: 5px;
+}
+
+.modal a{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.modal a p{
+    margin-top: min(5vh, 60px);
+    display: inline-block;
+    color: #999999;
+}
+
+/* MODAL ACTIVE */
+.modalOverlay.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.begin{
+    width: min(90vw, 940px);
+    margin: 50px auto;
+    text-align: center;
+}
+
+.begin img{
+    max-height: 280px;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+.begin h1{
+    font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 2.63rem;
+    color: #111111;
+    margin-bottom: 4px;
+}
+
+.begin p{
+    color: #777777;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+
+.subHeader{
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.subHeader h2{
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    color: #111111;
+    margin-right: 8px;
+}
+
+.subHeader a{
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    font-weight: bold;
+    color: #999999;
+    cursor: pointer;
+}
+
+
+article ul, article ol{
+    margin-inline-start: 1em;
+}
+
+article ul li, article ol li{
+    font-size: 1.13rem;
+    line-height: 1.75rem;
+    color: #444444;
+}
+
+.articleRecipe p{
+    font-size: 1.13rem;
+    color: #444444;
+    line-height: 1.75rem;
+}
+
+.recipeContent{
+    visibility:visible;
+    opacity: 1;
+}
+
+/* Active Article */
+.recipeContent.desactive{
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+/* FORM */
+.recipe-edit{
+    width: min(90vw, 940px);
+    margin: 0 auto;
+    position: relative;
+    margin-top: 24px;
+}
+
+.formAdmin{
+    width: min(90vw, 940px); /* header vai ter no max 940px de largura */
+    margin: 60px auto 0;
+    align-items: center;
+}
+.formAdmin.edit{
+    display: inline;
+}
+
+.formAdmin.edit > button{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#form-delete{
+    display: inline;
+}
+
+#form-delete button{
+    position: absolute;
+    top: 0;
+    right: 145px;
+    background-color: #DC4747;
+}
+
+.formAdmin .item{
+    padding: 16px 0;
+}
+
+.formAdmin .item div:nth-child(1){
+    font-size: 16px;
+    line-height: 19px;
+    color: #111111;
+    font-weight: bold;
+}
+
+.formAdmin input, 
+.formAdmin textarea{
+    width: 100%;
+    outline: none;
+    color: #555;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    margin-top: 10px;
+    height: 2rem;
+    padding: 16px;
+}
+
+.formAdmin textarea{
+    height: 100%;
+}
+
+.item button{
+    font-size: 16px;
+    line-height: 19px;
+    color: #6558c3;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 15px;
+    background-color: white;
+    cursor: pointer;
+}

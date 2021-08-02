@@ -1,0 +1,22 @@
+{% extends './layout.njk' %}
+
+{% block title %}
+<title>Foodfy - Create</title>
+{% endblock %}
+
+{% block content %}
+
+
+<form class="formAdmin" action="/admin/recipes" method="post">
+    <div class="headerAdmin create">
+        <h2>Criando receita</h2>
+        <button type="submit">Salvar receita</button>
+    </div>
+    
+    {% include "admin/fields.njk" %}
+</form>
+{% endblock %}
+
+{% block script %}
+<script src="/scriptAdmin.js"></script>
+{% endblock  %}
